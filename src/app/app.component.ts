@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Server } from './model/server';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'cmp-databinding';
+  serverElements = [
+    new Server('server', 'test', 'web'),
+    new Server('blueprint', 'qa', 'web')
+  ];
+
+  onServerAdded(server: Server) {
+    this.serverElements.push(server);
+  }
+
+  onBluePrintAdded(blueprint: Server) {
+    this.serverElements.push(blueprint);
+  }
 }

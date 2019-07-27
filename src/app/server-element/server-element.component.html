@@ -1,0 +1,9 @@
+<div class="card">
+  <div class="card-header">{{ server.name }}</div>
+  <div class="card-text">
+    <p>
+      <strong *ngIf="server.type === 'server'" style="color: red">{{ server.content }}</strong>
+      <em *ngIf="server.type === 'blueprint'">{{ server.content }}</em>
+    </p>
+  </div>
+</div>
