@@ -9,7 +9,7 @@ import { Server } from '../model/server';
 export class ServerElementComponent implements OnInit {
   @Input() server: Server;
 
-  constructor() {}
+  constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 }
